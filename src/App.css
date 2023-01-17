@@ -42,5 +42,8 @@
 #loginuser {
   background-image: url("https://img.freepik.com/free-vector/hand-drawn-colorful-science-education-wallpaper_23-2148489183.jpg?w=2000");
   background-repeat: no-repeat;
-  background-size: 910px 540px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

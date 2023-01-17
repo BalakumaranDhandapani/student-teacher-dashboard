@@ -3,17 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function SideBar({dashboardLink, detailsLink}) {
+function SideBar({ isLink }) {
+    // console.log(isLink);
+    const { dashboardLink, detailsLink } = isLink;
     return (
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             {/* <!-- Sidebar - Brand --> */}
-            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <Link className="sidebar-brand d-flex align-items-center justify-content-center" to={"/"}>
                 <div className="sidebar-brand-icon">
                     <FontAwesomeIcon icon={faSchool} size={"2x"} />
                 </div>
                 <div className="sidebar-brand-text mx-2">Public School</div>
-            </a>
+            </Link>
 
             {/* <!-- Divider --> */}
             <hr className="sidebar-divider my-0" />

@@ -1,24 +1,34 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import SideBar from './SideBar'
-import TopBar from './TopBar'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import SideBar from "./SideBar";
+import TopBar from "./TopBar";
 
-function Portal() {
+function Portal({ isTeacher, name }) {
+    const isLink = isTeacher
+        ? {
+            dashboardLink: "/portal/teacher-dashboard",
+            detailsLink: "/portal/teacher-details",
+        }
+        : {
+            dashboardLink: "/student-portal/student-dashboard",
+            detailsLink: "/student-portal/student-details",
+        }
+        ;
     return (
         <>
             <div id="wrapper">
-                <SideBar />
+                <SideBar isLink={isLink} />
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
-                        <TopBar />
-                        <div className='container-fluid'>
+                        <TopBar name={name} />
+                        <div className="container-fluid">
                             <Outlet></Outlet>
                         </div>
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Portal
+export default Portal;

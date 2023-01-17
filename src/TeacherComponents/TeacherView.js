@@ -53,6 +53,7 @@ function TeacherView() {
                                                         <th>Section</th>
                                                         <th>Gender</th>
                                                         <th>Father's Name</th>
+                                                        <th>Contact Number</th>
                                                         <th>Class Co-Ordinator</th>
                                                     </tr>
                                                 </thead>
@@ -63,6 +64,7 @@ function TeacherView() {
                                                         <td>{studentList.Section}</td>
                                                         <td>{studentList.Gender}</td>
                                                         <td>{studentList.Father_Name}</td>
+                                                        <td>{studentList.Contact_Number}</td>
                                                         <td>{studentList.Class_Teacher}</td>
                                                     </tr>
                                                 </tbody>
